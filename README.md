@@ -1,8 +1,8 @@
 # Clinical Variant Pathogenicity Analysis (GRCh38)
 
-## Project Overview
+## Assignment Overview
 
-This project investigates the pathogenicity of three clinically significant genetic variants using publicly available genomic databases and standardized variant interpretation guidelines. The objective is to integrate clinical, computational, and genomic evidence into a structured and reproducible analysis workflow.
+This assignment investigates the pathogenicity of three clinically significant genetic variants using publicly available genomic databases and standardized variant interpretation guidelines. The objective is to integrate clinical, computational, and genomic evidence into a structured and reproducible analysis workflow.
 
 All genomic coordinates are based on the GRCh38 reference genome.
 
