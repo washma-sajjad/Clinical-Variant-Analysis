@@ -99,7 +99,7 @@ The file was:
 ## ClinVar Annotation
 The VCF file was annotated using a ClinVar GRCh38 dataset.
 
-**Workflow:**
+**Workflow: (done in WSL)**
 
 ```bash
 # Install required tools in WSL
