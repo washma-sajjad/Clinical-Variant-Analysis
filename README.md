@@ -32,7 +32,7 @@ For each disorder:
 - Variants classified as Pathogenic or Likely Pathogenic were filtered.
 - Review status and supporting studies were examined.
 - Gene name, HGVS nomenclature, genomic coordinates, and clinical assertions were extracted.
-- Evidence summaries were written in original language based on submission data.
+- Evidence summaries were written in the Excel file.
 
 ---
 
@@ -42,7 +42,7 @@ For each gene:
 - The OMIM entry was reviewed.
 - Disease phenotype descriptions were extracted.
 - Major clinical features were summarized.
-- Mode of inheritance (Autosomal Dominant, Autosomal Recessive, etc.) was documented.
+- Mode of inheritance (Autosomal Dominant, Autosomal Recessive, etc.) was documented in the Excel file.
 
 ---
 
@@ -58,7 +58,7 @@ The following were recorded:
 - AlphaMissense score  
 - RAVEL score  
 
-Screenshots were captured and stored in the repository.
+Screenshots were captured and stored in the /Screenshots directory in the repository.
 
 ---
 
@@ -72,7 +72,7 @@ Criteria assessed included:
 - PM2 (absence or rarity in population databases)  
 - PP3 (computational evidence supporting deleterious effect)  
 
-A final ACMG classification was assigned with justification.
+A final ACMG classification was assigned with justification in the Excel file.
 
 ---
 
@@ -97,7 +97,10 @@ The file was:
 - Indexed using `tabix` (via **bcftools** installed in WSL)
 
 ## ClinVar Annotation
-The VCF file was annotated using a ClinVar GRCh38 dataset.
+Variants were annotated using the official GRCh38 ClinVar VCF dataset downloaded from NCBI ClinVar.The VCF file was annotated using a ClinVar GRCh38 dataset.
+
+A `vcfanno` configuration file (`clinvar.conf`) was created to extract selected ClinVar `INFO` fields (e.g., `CLNSIG`, `CLNDN`) from the ClinVar dataset and add them to the variant file.
+The config file is avaialable in the /Data directory in the repository.
 
 **Workflow: (done in WSL)**
 
@@ -111,6 +114,10 @@ wget -O vcfanno https://github.com/brentp/vcfanno/releases/latest/download/vcfan
 chmod +x vcfanno
 # Add vcfanno to PATH or run directly
 
+#Prepare ClinVar
+bgzip -c clinvar.vcf > clinvar.vcf.gz
+tabix -p vcf clinvar.vcf.gz
+
 # Compress and index VCF
 bgzip variants.vcf
 tabix -p vcf variants.vcf.gz
@@ -118,4 +125,4 @@ tabix -p vcf variants.vcf.gz
 # Annotate using ClinVar
 ./vcfanno clinvar.conf variants.vcf.gz > annotated_variants.vcf
 ```
-The annotated and original VCF files are available in the repository.
+The annotated and original VCF files are available in the /Data directory in this repository.
