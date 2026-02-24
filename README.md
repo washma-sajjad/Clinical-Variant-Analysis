@@ -77,35 +77,45 @@ A final ACMG classification was assigned with justification.
 ---
 
 ### 5. VCF File Creation
-
 A multi-variant VCF file was manually constructed using GRCh38 coordinates.
 
 The VCF file includes:
-- VCF v4.2 header  
-- Chromosome (CHROM)  
-- Position (POS)  
-- Reference allele (REF)  
-- Alternate allele (ALT)  
-- Quality (QUAL)  
-- Filter status (FILTER)  
-- INFO annotations  
+
+- VCF v4.2 header
+- Chromosome (CHROM)
+- Position (POS)
+- Reference allele (REF)
+- Alternate allele (ALT)
+- Quality (QUAL)
+- Filter status (FILTER)
+- INFO annotations
 
 The file was:
-- Converted to Unix format  
-- Compressed using bgzip  
-- Indexed using tabix  
 
----
+- Converted to Unix format
+- Compressed using `bgzip` (via **bcftools** installed in WSL)
+- Indexed using `tabix` (via **bcftools** installed in WSL)
 
-### 6. ClinVar Annotation
-
+## ClinVar Annotation
 The VCF file was annotated using a ClinVar GRCh38 dataset.
 
-Workflow:
+**Workflow:**
 
 ```bash
+# Install required tools in WSL
+sudo apt update
+sudo apt install bcftools tabix wget
+
+# Download vcfanno from GitHub
+wget -O vcfanno https://github.com/brentp/vcfanno/releases/latest/download/vcfanno_linux_amd64
+chmod +x vcfanno
+# Add vcfanno to PATH or run directly
+
+# Compress and index VCF
 bgzip variants.vcf
 tabix -p vcf variants.vcf.gz
-vcfanno clinvar.conf variants.vcf.gz > annotated_variants.vcf.
+
+# Annotate using ClinVar
+./vcfanno clinvar.conf variants.vcf.gz > annotated_variants.vcf
 ```
-The annotated VCF file is available in the repository.
+The annotated and original VCF files are available in the repository.
