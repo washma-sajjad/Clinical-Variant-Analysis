@@ -126,3 +126,9 @@ tabix -p vcf variants.vcf.gz
 ./vcfanno clinvar.conf variants.vcf.gz > annotated_variants.vcf
 ```
 The annotated and original VCF files are available in the /Data directory in this repository.
+
+## Assignment Submitted by:
+Washma Sajjad
+Ashna Abrar
+Nawal Babar
+Manaal Tufail
