@@ -1,0 +1,35 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##fileDate=20260226
+##source=WGS/WES_PatientVariantData
+##reference=GRCh38/hg38
+##assembly=GRCh38
+##INFO=<ID=GENE,Number=1,Type=String,Description="Gene symbol">
+##INFO=<ID=PROT,Number=1,Type=String,Description="Protein change">
+##INFO=<ID=CONSEQUENCE,Number=1,Type=String,Description="Variant consequence">
+##INFO=<ID=CONDITION,Number=.,Type=String,Description="Associated condition">
+##INFO=<ID=CLNSIG,Number=.,Type=String,Description="ClinVar clinical significance">
+##INFO=<ID=CLNREVSTAT,Number=.,Type=String,Description="ClinVar review status">
+##INFO=<ID=CLNDN,Number=.,Type=String,Description="ClinVar disease name">
+##INFO=<ID=ALPHAMISSENSE,Number=1,Type=Float,Description="AlphaMissense pathogenicity score">
+##INFO=<ID=REVEL,Number=1,Type=Float,Description="REVEL pathogenicity score">
+##INFO=<ID=ACMG,Number=.,Type=String,Description="ACMG/AMP classification criteria">
+##INFO=<ID=TRANSCRIPT,Number=1,Type=String,Description="RefSeq transcript accession">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read depth">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype quality">
+##FORMAT=<ID=AD,Number=R,Type=Integer,Description="Allelic depths for ref and alt alleles">
+##SAMPLE=<ID=PATIENT_001,Description="Patient WGS/WES Sample">
+##contig=<ID=chrX>
+##contig=<ID=chr7>
+##contig=<ID=chr17>
+##contig=<ID=chr13>
+##contig=<ID=chr1>
+##contig=<ID=chr12>
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	PATIENT_001
+chrX	32389644	rs80338650	C	T	99	PASS	GENE=DMD;PROT=p.Arg2905Ter;CONSEQUENCE=nonsense_variant;CONDITION=Duchenne_muscular_dystrophy;CLNSIG=Pathogenic;CLNREVSTAT=criteria_provided_multiple_submitters;CLNDN=Duchenne_muscular_dystrophy;ALPHAMISSENSE=0.99;REVEL=0.972;ACMG=PVS1|PS1|PS4|PM2;TRANSCRIPT=NM_004006.3	GT:DP:GQ:AD	1/1:45:99:2,43
+chr7	117548628	rs113993960	CTT	C	99	PASS	GENE=CFTR;PROT=p.Phe508del;CONSEQUENCE=inframe_deletion;CONDITION=Cystic_fibrosis;CLNSIG=Pathogenic;CLNREVSTAT=reviewed_by_expert_panel;CLNDN=Cystic_fibrosis;ALPHAMISSENSE=0.97;REVEL=0.965;ACMG=PVS1|PS1|PS3|PM2|PP5;TRANSCRIPT=NM_000492.4	GT:DP:GQ:AD	0/1:52:99:26,26
+chr17	43093141	rs80357906	C	CT	99	PASS	GENE=BRCA1;PROT=p.Gln1756Profs*74;CONSEQUENCE=frameshift_variant;CONDITION=Hereditary_breast_and_ovarian_cancer_syndrome;CLNSIG=Pathogenic;CLNREVSTAT=reviewed_by_expert_panel;CLNDN=Hereditary_breast_and_ovarian_cancer_syndrome;ALPHAMISSENSE=0.98;REVEL=0.981;ACMG=PVS1|PS1|PS4|PM2|PP5;TRANSCRIPT=NM_007294.4	GT:DP:GQ:AD	0/1:60:99:30,30
+chr13	52533870	rs76151636	C	A	99	PASS	GENE=ATP7B;PROT=p.His1069Gln;CONSEQUENCE=missense_variant;CONDITION=Wilson_disease;CLNSIG=Pathogenic;CLNREVSTAT=criteria_provided_multiple_submitters;CLNDN=Wilson_disease;ALPHAMISSENSE=0.93;REVEL=0.901;ACMG=PS1|PS3|PM1|PM2|PP5;TRANSCRIPT=NM_000053.4	GT:DP:GQ:AD	0/1:48:99:24,24
+chr1	155235252	rs76763715	A	G	99	PASS	GENE=GBA;PROT=p.Asn409Ser;CONSEQUENCE=missense_variant;CONDITION=Gaucher_disease_type1;CLNSIG=Pathogenic;CLNREVSTAT=criteria_provided_multiple_submitters;CLNDN=Gaucher_disease_type_1;ALPHAMISSENSE=0.91;REVEL=0.883;ACMG=PS1|PS3|PM2|PP5;TRANSCRIPT=NM_000157.4	GT:DP:GQ:AD	0/1:55:99:28,27
+chr12	102917337	rs5030858	C	T	99	PASS	GENE=PAH;PROT=p.Arg408Trp;CONSEQUENCE=missense_variant;CONDITION=Phenylketonuria;CLNSIG=Pathogenic;CLNREVSTAT=criteria_provided_multiple_submitters;CLNDN=Phenylketonuria;ALPHAMISSENSE=0.96;REVEL=0.951;ACMG=PVS1|PS1|PS3|PM2|PP5;TRANSCRIPT=NM_000277.3	GT:DP:GQ:AD	0/1:50:99:25,25
