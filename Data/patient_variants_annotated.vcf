@@ -1,0 +1,38 @@
+##fileformat=VCFv4.2
+##contig=<ID=chrX>
+##contig=<ID=chr7>
+##contig=<ID=chr17>
+##contig=<ID=chr13>
+##contig=<ID=chr1>
+##contig=<ID=chr12>
+##SAMPLE=<ID=PATIENT_001,Description="Patient WGS/WES Sample">
+##FILTER=<ID=PASS,Description="All filters passed">
+##INFO=<ID=ACMG,Number=.,Type=String,Description="ACMG/AMP classification criteria">
+##INFO=<ID=ALPHAMISSENSE,Number=1,Type=Float,Description="AlphaMissense pathogenicity score">
+##INFO=<ID=CLNDISDB,Number=.,Type=String,Description="Tag-value pairs of disease database name and identifier submitted for germline classifications, e.g. OMIM:NNNNNN (from clinvar.vcf.gz)">
+##INFO=<ID=CLNDN,Number=.,Type=String,Description="ClinVar's preferred disease name for the concept specified by disease identifiers in CLNDISDB (from clinvar.vcf.gz)">
+##INFO=<ID=CLNHGVS,Number=.,Type=String,Description="Top-level (primary assembly, alt, or patch) HGVS expression. (from clinvar.vcf.gz)">
+##INFO=<ID=CLNREVSTAT,Number=.,Type=String,Description="ClinVar review status of germline classification for the Variation ID (from clinvar.vcf.gz)">
+##INFO=<ID=CLNSIG,Number=.,Type=String,Description="Aggregate germline classification for this single variant; multiple values are separated by a vertical bar (from clinvar.vcf.gz)">
+##INFO=<ID=CONDITION,Number=.,Type=String,Description="Associated condition">
+##INFO=<ID=CONSEQUENCE,Number=1,Type=String,Description="Variant consequence">
+##INFO=<ID=GENE,Number=1,Type=String,Description="Gene symbol">
+##INFO=<ID=PROT,Number=1,Type=String,Description="Protein change">
+##INFO=<ID=REVEL,Number=1,Type=Float,Description="REVEL pathogenicity score">
+##INFO=<ID=TRANSCRIPT,Number=1,Type=String,Description="RefSeq transcript accession">
+##FORMAT=<ID=AD,Number=R,Type=Integer,Description="Allelic depths for ref and alt alleles">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read depth">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype quality">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##fileDate=20260226
+##source=WGS/WES_PatientVariantData
+##reference=GRCh38/hg38
+##assembly=GRCh38
+##vcfanno=0.3.5
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	PATIENT_001
+chrX	32389644	rs80338650	C	T	99.0	PASS	GENE=DMD;PROT=p.Arg2905Ter;CONSEQUENCE=nonsense_variant;CONDITION=Duchenne_muscular_dystrophy;CLNSIG=Pathogenic;CLNREVSTAT=criteria_provided_multiple_submitters;CLNDN=Duchenne_muscular_dystrophy;ALPHAMISSENSE=0.99;REVEL=0.972;ACMG=PVS1|PS1|PS4|PM2;TRANSCRIPT=NM_004006.3	GT:DP:GQ:AD	1/1:45:99:2,43
+chr7	117548628	rs113993960	CTT	C	99.0	PASS	GENE=CFTR;PROT=p.Phe508del;CONSEQUENCE=inframe_deletion;CONDITION=Cystic_fibrosis;CLNSIG=Pathogenic;CLNREVSTAT=reviewed_by_expert_panel;CLNDN=Cystic_fibrosis;ALPHAMISSENSE=0.97;REVEL=0.965;ACMG=PVS1|PS1|PS3|PM2|PP5;TRANSCRIPT=NM_000492.4	GT:DP:GQ:AD	0/1:52:99:26,26
+chr17	43093141	rs80357906	C	CT	99.0	PASS	GENE=BRCA1;PROT=p.Gln1756Profs*74;CONSEQUENCE=frameshift_variant;CONDITION=Hereditary_breast_and_ovarian_cancer_syndrome;CLNSIG=Pathogenic;CLNREVSTAT=reviewed_by_expert_panel;CLNDN=Hereditary_breast_and_ovarian_cancer_syndrome;ALPHAMISSENSE=0.98;REVEL=0.981;ACMG=PVS1|PS1|PS4|PM2|PP5;TRANSCRIPT=NM_007294.4	GT:DP:GQ:AD	0/1:60:99:30,30
+chr13	52533870	rs76151636	C	A	99.0	PASS	GENE=ATP7B;PROT=p.His1069Gln;CONSEQUENCE=missense_variant;CONDITION=Wilson_disease;CLNSIG=Pathogenic;CLNREVSTAT=criteria_provided_multiple_submitters;CLNDN=Wilson_disease;ALPHAMISSENSE=0.93;REVEL=0.901;ACMG=PS1|PS3|PM1|PM2|PP5;TRANSCRIPT=NM_000053.4	GT:DP:GQ:AD	0/1:48:99:24,24
+chr1	155235252	rs76763715	A	G	99.0	PASS	GENE=GBA;PROT=p.Asn409Ser;CONSEQUENCE=missense_variant;CONDITION=Gaucher_disease_type1;CLNSIG=Pathogenic|risk_factor;CLNREVSTAT=criteria_provided,_multiple_submitters,_no_conflicts;CLNDN=GBA1-related_disorder|Parkinsonian_disorder|Resting_tremor|Movement_disorder|Hypomimic_face|Thoracolumbar_scoliosis|Parkinson_disease,_late-onset|Lewy_body_dementia|Gaucher_disease-ophthalmoplegia-cardiovascular_calcification_syndrome|Gaucher_disease_perinatal_lethal|Gaucher_disease_type_I|Gaucher_disease_type_II|Gaucher_disease_type_III|not_specified|not_provided|Gaucher_disease|Dementia,_Lewy_body,_susceptibility_to;ALPHAMISSENSE=0.91;REVEL=0.883;ACMG=PS1|PS3|PM2|PP5;TRANSCRIPT=NM_000157.4;CLNDISDB=.|Human_Phenotype_Ontology:HP:0001300,MONDO:MONDO:0021095,MedGen:C0242422|Human_Phenotype_Ontology:HP:0002322,MedGen:C0234379|Human_Phenotype_Ontology:HP:0001294,Human_Phenotype_Ontology:HP:0100022,MONDO:MONDO:0005395,MedGen:C0026650|Human_Phenotype_Ontology:HP:0000338,Human_Phenotype_Ontology:HP:0008769,MedGen:C0813217|Human_Phenotype_Ontology:HP:0002944,Human_Phenotype_Ontology:HP:0004567,Human_Phenotype_Ontology:HP:0004585,MedGen:C0749379|MONDO:MONDO:0008199,MedGen:C3160718,OMIM:168600,Orphanet:411602|MONDO:MONDO:0007488,MedGen:C0752347,OMIM:127750|MONDO:MONDO:0009268,MedGen:C1856476,OMIM:231005,Orphanet:2072|MONDO:MONDO:0011945,MedGen:C1842704,OMIM:608013,Orphanet:85212|MONDO:MONDO:0009265,MedGen:C1961835,OMIM:230800,Orphanet:355,Orphanet:77259|MONDO:MONDO:0009266,MedGen:C0268250,OMIM:230900,Orphanet:77260|MONDO:MONDO:0009267,MedGen:C0268251,OMIM:231000,Orphanet:355,Orphanet:77261|MedGen:CN169374|MedGen:C3661900|MONDO:MONDO:0018150,MedGen:C0017205,Orphanet:355|MedGen:C2676021;CLNHGVS=NC_000001.11:g.155235252A>G	GT:DP:GQ:AD	0/1:55:99:28,27
+chr12	102917337	rs5030858	C	T	99.0	PASS	GENE=PAH;PROT=p.Arg408Trp;CONSEQUENCE=missense_variant;CONDITION=Phenylketonuria;CLNSIG=Pathogenic;CLNREVSTAT=criteria_provided_multiple_submitters;CLNDN=Phenylketonuria;ALPHAMISSENSE=0.96;REVEL=0.951;ACMG=PVS1|PS1|PS3|PM2|PP5;TRANSCRIPT=NM_000277.3	GT:DP:GQ:AD	0/1:50:99:25,25

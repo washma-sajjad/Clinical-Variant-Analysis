@@ -1,0 +1,5 @@
+[[annotation]]
+file="clinvar.vcf.gz"
+fields=["CLNSIG", "CLNDN", "CLNREVSTAT", "CLNDISDB", "CLNHGVS"]
+ops=["self", "self", "self", "self", "self"]
+names=["CLNSIG", "CLNDN", "CLNREVSTAT", "CLNDISDB", "CLNHGVS"]
